@@ -7,7 +7,6 @@ public class Pattern14 {
 		int n = 5;
 		int star = 1;
 		
-		// work
 		int row = 1;
 		int space=n-1;
 	}
