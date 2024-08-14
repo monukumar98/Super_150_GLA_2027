@@ -6,6 +6,8 @@ public class Pattern14 {
 		// TODO Auto-generated method stub
 		int n = 5;
 		int star = 1;
+		
+		// work
 		int row = 1;
 		int space=n-1;
 	}
