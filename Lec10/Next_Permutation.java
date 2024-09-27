@@ -5,6 +5,10 @@ public class Next_Permutation {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] arr = { 3, 2, 1 };
+		nextpermutation(arr);
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
 
 	}
 
@@ -16,6 +20,10 @@ public class Next_Permutation {
 				p = i;
 				break;
 			}
+		}
+		if (p == -1) {
+			Reverse(arr, 0, n - 1);
+			return;
 		}
 		int q = -1;
 		for (int i = n - 1; i > p; i--) {
