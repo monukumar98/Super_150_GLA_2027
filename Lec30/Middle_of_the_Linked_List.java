@@ -25,7 +25,7 @@ public class Middle_of_the_Linked_List {
 			while (Fast != null && Fast.next != null) {
 				slow = slow.next;
 				Fast = Fast.next.next;
-
+                 
 			}
 			return slow;
 		}
