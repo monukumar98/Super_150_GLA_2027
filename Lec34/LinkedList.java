@@ -1,9 +1,7 @@
-package Lec30;
-
-
-public class LinkedList {
+package Lec34;
+public class LinkedList<T> {
 	class Node {
-		int val;
+		T val;
 		Node next;
 	}
 
@@ -12,7 +10,7 @@ public class LinkedList {
 	private int size;
 
 	// O(1)
-	public void AddFirst(int item) {
+	public void AddFirst(T item) {
 		Node nn = new Node();
 		nn.val = item;
 		if (size == 0) {
@@ -28,7 +26,7 @@ public class LinkedList {
 	}
 
 //O(1)
-	public void AddLast(int item) {
+	public void AddLast(T item) {
 		if (size == 0) {
 			AddFirst(item);
 		} else {
@@ -41,7 +39,7 @@ public class LinkedList {
 	}
 
 //O(N)
-	public void Addat_index(int item, int k) throws Exception {
+	public void Addat_index(T item, int k) throws Exception {
 		if (k == 0) {
 			AddFirst(item);
 		} else if (k == size) {
@@ -78,22 +76,22 @@ public class LinkedList {
 	}
 
 	// O(1)
-	public int getFirst() {
+	public T getFirst() {
 		return head.val;
 	}
 
 	// O(1)
-	public int getLast() {
+	public T getLast() {
 		return tail.val;
 	}
 
 	// O(N)
-	public int get_at_index(int k) throws Exception {
+	public T get_at_index(int k) throws Exception {
 		return GetNode(k).val;
 	}
 
-	public int removeFirst() {
-		int val = head.val;
+	public T removeFirst() {
+		T val = head.val;
 		if (size == 1) {
 			head = null;
 			tail = null;
@@ -104,13 +102,13 @@ public class LinkedList {
 		return val;
 	}
 
-	public int removeLast() throws Exception {
+	public T removeLast() throws Exception {
 
 		if (size == 1) {
 			return removeFirst();
 
 		} else {
-			int val = tail.val;
+			T val = tail.val;
 			Node sl = GetNode(size - 2);
 			tail = sl;
 			tail.next = null;
@@ -120,7 +118,7 @@ public class LinkedList {
 
 	}
 
-	public int remove_at_index(int k) throws Exception {
+	public T remove_at_index(int k) throws Exception {
 		if (k == 0) {
 			return removeFirst();
 		} else if (k == size - 1) {
